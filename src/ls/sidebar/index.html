@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAS #29 Sidebar</title>
+    <link
+      href="https://fonts.cdnfonts.com/css/sf-pro-display"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6daf535e20.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="sidebar">
+      <div class="box-section">
+        <div class="box-current" tooltiptext="Your team">
+          <img src="./assets//widelab-logo.png" alt="user-image" />
+          <div id="bridge1"></div>
+          <ul id="teams-menu">
+            <li class="">
+              <i class="fa-solid fa-grip-vertical"></i>
+              <img src="./assets/mercedes-logo.jpg" alt="Logo Team Mercedes" />
+              <div>
+                Mercedes
+                <p>Team Plan · 45k members</p>
+              </div>
+              <i class="fa-solid fa-check unselected"></i>
+            </li>
+            <li class="">
+              <i class="fa-solid fa-grip-vertical"></i>
+              <img src="./assets/s_logo.png" alt="Logo Team Sandra" />
+              <div>
+                Sandra
+                <p>Personal Plan · 1 member</p>
+              </div>
+              <i class="fa-solid fa-check unselected"></i>
+            </li>
+            <li class="selected">
+              <i class="fa-solid fa-grip-vertical"></i>
+              <img src="./assets/widelab-logo.png" alt="Logo Team widelab" />
+              <div>
+                widelab
+                <p>Team Plan · 40 members</p>
+              </div>
+              <i class="fa-solid fa-check"></i>
+            </li>
+            <li class="">
+              <i class="fa-solid fa-grip-vertical"></i>
+              <img src="./assets/figma-logo.png" alt="Logo Team Figma" />
+              <div>
+                Figma
+                <p>Team Plan · 556 members</p>
+              </div>
+              <i class="fa-solid fa-check unselected"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="box-section">
+          <div class="box-simple" tooltiptext="Search...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div class="box-section">
+          <div class="box-simple" tooltiptext="Inbox">
+            <i class="fa-solid fa-inbox"></i>
+          </div>
+          <div class="box-simple" tooltiptext="Activity">
+            <i class="fa-regular fa-bell"></i>
+          </div>
+          <div class="box-simple" tooltiptext="Schedule">
+            <i class="fa-regular fa-calendar"></i>
+          </div>
+        </div>
+        <div class="box-section">
+          <div class="box-simple" tooltiptext="Boosts">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="box-simple" tooltiptext="Documents">
+            <i class="fa-regular fa-folder-open"></i>
+          </div>
+        </div>
+        <div class="box-section">
+          <div class="box-simple" tooltiptext="Projects: Personal">
+            <div class="box-project project-green"></div>
+          </div>
+          <div class="box-simple" tooltiptext="Projects: Business">
+            <div class="box-project project-blue"></div>
+          </div>
+          <div class="box-simple" tooltiptext="Projects: Travel">
+            <div class="box-project project-purple"></div>
+          </div>
+          <div class="box-simple" tooltiptext="Add new Project...">
+            <div class="box-project project-add">+</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-section">
+        <div class="box-section">
+          <div class="box-simple" tooltiptext="Settings...">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div class="box-simple" tooltiptext="Help...">
+            <i class="fa-regular fa-life-ring"></i>
+          </div>
+        </div>
+        <hr />
+        <div class="box-current" tooltiptext="Profile">
+          <img src="./assets/user-image.png" alt="user-image" />
+          <div id="bridge2"></div>
+          <div id="user-menu">
+            <ul>
+              <li class="">
+                <img
+                  src="./assets/user-image.png"
+                  alt="User Sandra Marx Picture"
+                />
+                <div>
+                  Sandra Marx
+                  <p>sandra@gmail.com</p>
+                </div>
+              </li>
+            </ul>
+            <hr />
+            <ul>
+              <li class="">
+                <i class="fa-regular fa-folder-closed"></i>
+                Integrations
+              </li>
+              <li class="">
+                <i class="fa-regular fa-clock"></i>
+                History
+              </li>
+              <li class="">
+                <i class="fa-regular fa-star icon-color"></i>
+                Upgrade to Pro
+              </li>
+            </ul>
+            <ul>
+              <li class="selected">
+                <i class="fa-solid fa-circle selected"></i>
+                Update App
+              </li>
+              <li class="">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
+              </li>
+            </ul>
+            <p>v1.2.69 · Terms & Conditions</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
