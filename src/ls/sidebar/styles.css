@@ -54,6 +54,17 @@ hr {
   background-color: #e0e0e0;
 }
 
+.notificaion-dot {
+  position: absolute;
+  bottom: 5px;
+  right: 3px;
+  height: 9px;
+  width: 9px;
+  background-color: #ed4b23;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
 .box-current {
   width: 32px;
   height: 32px;
@@ -206,7 +217,7 @@ img {
 }
 
 .box-current:hover {
-  background-color: #e0e0e0;
+  background-color: #d8d8d8;
   border: 2px solid #d0d0d0;
   display: inherit;
 }
