@@ -3,4 +3,4 @@
 Read this material:
 https://internetingishard.netlify.app/html-and-css/floats/
 
-Quiz: https://forms.office.com/r/Pvnv1TVFT5
+Quiz: https://forms.office.com/r/kQ54kiLX1b
