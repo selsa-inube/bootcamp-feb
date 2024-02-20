@@ -2,4 +2,4 @@
 
 Read this guide of React Docs: https://react.dev/learn/keeping-components-pure
 
-Quiz: https://forms.office.com/r/7YgKEdJVhk
+Quiz: https://forms.office.com/r/icTNrLeHDp
