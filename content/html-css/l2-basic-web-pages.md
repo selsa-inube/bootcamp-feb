@@ -3,4 +3,4 @@
 **Read the following article:**
 https://internetingishard.netlify.app/html-and-css/basic-web-pages/
 
-Quiz: https://forms.office.com/r/QYASMEzV0v
+Quiz: https://forms.office.com/r/nUYjkT71Kr
