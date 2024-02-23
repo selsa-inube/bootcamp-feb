@@ -14,116 +14,149 @@
     ></script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
-    <nav class="sidebar">
-      <div class="box-section">
-        <div class="box-current" tooltiptext="Your team">
-          <img src="./assets//widelab-logo.png" alt="user-image" />
-          <div id="bridge1"></div>
+    <nav>
+      <section>
+        <ul>
+          <li>
+            <section class="tb-button" tooltiptext="Your team">
+              <img src="./assets//widelab-logo.png" alt="user-image" />
+            </section>
+          </li>
+        </ul>
+        <section>
+          <section id="bridge1"></section>
           <ul id="teams-menu">
             <li class="">
               <i class="fa-solid fa-grip-vertical"></i>
               <img src="./assets/mercedes-logo.png" alt="Logo Team Mercedes" />
-              <div>
+              <section>
                 Mercedes
                 <p>Team Plan · 45k members</p>
-              </div>
+              </section>
               <i class="fa-solid fa-check unselected"></i>
             </li>
             <li class="">
               <i class="fa-solid fa-grip-vertical"></i>
               <img src="./assets/s_logo.png" alt="Logo Team Sandra" />
-              <div>
+              <section>
                 Sandra
                 <p>Personal Plan · 1 member</p>
-              </div>
+              </section>
               <i class="fa-solid fa-check unselected"></i>
             </li>
             <li class="selected">
               <i class="fa-solid fa-grip-vertical"></i>
               <img src="./assets/widelab-logo.png" alt="Logo Team widelab" />
-              <div>
+              <section>
                 widelab
                 <p>Team Plan · 40 members</p>
-              </div>
+              </section>
               <i class="fa-solid fa-check"></i>
             </li>
             <li class="">
               <i class="fa-solid fa-grip-vertical"></i>
               <img src="./assets/figma-logo.png" alt="Logo Team Figma" />
-              <div>
+              <section>
                 Figma
                 <p>Team Plan · 556 members</p>
-              </div>
+              </section>
               <i class="fa-solid fa-check unselected"></i>
             </li>
           </ul>
-        </div>
-        <div class="box-section">
-          <div class="box-simple" tooltiptext="Search...">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-        </div>
-        <div class="box-section">
-          <div class="box-simple" tooltiptext="Inbox">
-            <i class="fa-solid fa-inbox"></i>
-          </div>
-          <div class="box-simple" tooltiptext="Activity">
-            <i class="fa-regular fa-bell"></i>
-            <div class="notificaion-dot"></div>
-          </div>
-          <div class="box-simple" tooltiptext="Schedule">
-            <i class="fa-regular fa-calendar"></i>
-          </div>
-        </div>
-        <div class="box-section">
-          <div class="box-simple" tooltiptext="Boosts">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <div class="box-simple" tooltiptext="Documents">
-            <i class="fa-regular fa-folder-open"></i>
-          </div>
-        </div>
-        <div class="box-section">
-          <div class="box-simple" tooltiptext="Projects: Personal">
-            <div class="box-project project-green"></div>
-          </div>
-          <div class="box-simple" tooltiptext="Projects: Business">
-            <div class="box-project project-blue"></div>
-          </div>
-          <div class="box-simple" tooltiptext="Projects: Travel">
-            <div class="box-project project-purple"></div>
-          </div>
-          <div class="box-simple" tooltiptext="Add new Project...">
-            <div class="box-project project-add">+</div>
-          </div>
-        </div>
-      </div>
+        </section>
+        <ul>
+          <li>
+            <section class="tb-button" tooltiptext="Search...">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </section>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <section class="tb-button" tooltiptext="Inbox">
+              <i class="fa-solid fa-inbox"></i>
+            </section>
+          </li>
+          <li>
+            <section class="tb-button" tooltiptext="Activity">
+              <i class="fa-regular fa-bell"></i>
+              <section class="notificaion-dot"></section>
+            </section>
+          </li>
+          <li>
+            <section class="tb-button" tooltiptext="Schedule">
+              <i class="fa-regular fa-calendar"></i>
+            </section>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <section class="tb-button" tooltiptext="Boosts">
+              <i class="fa-solid fa-bolt"></i>
+            </section>
+          </li>
+          <li>
+            <section class="tb-button" tooltiptext="Documents">
+              <i class="fa-regular fa-folder-open"></i>
+            </section>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <section class="tb-button" tooltiptext="Projects: Personal">
+              <section class="box-project project-green"></section>
+            </section>
+          </li>
+          <li>
+            <section class="tb-button" tooltiptext="Projects: Business">
+              <section class="box-project project-blue"></section>
+            </section>
+          </li>
+          <li>
+            <section class="tb-button" tooltiptext="Projects: Travel">
+              <section class="box-project project-purple"></section>
+            </section>
+            <section class="tb-button" tooltiptext="Add new Project...">
+              <section class="box-project project-add">
+                <i class="fa-solid fa-plus"></i>
+              </section>
+            </section>
+          </li>
+        </ul>
+      </section>
 
-      <div class="box-section">
-        <div class="box-section">
-          <div class="box-simple" tooltiptext="Settings...">
+      <section>
+        <ul>
+          <li class="tb-button" tooltiptext="Settings...">
             <i class="fa-solid fa-gear"></i>
-          </div>
-          <div class="box-simple" tooltiptext="Help...">
+          </li>
+          <li class="tb-button" tooltiptext="Help...">
             <i class="fa-regular fa-life-ring"></i>
-          </div>
-        </div>
-        <hr />
-        <div class="box-current" tooltiptext="Profile">
-          <img src="./assets/user-image.png" alt="user-image" />
-          <div id="bridge2"></div>
-          <div id="user-menu">
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <section class="tb-button" tooltiptext="Profile">
+              <img src="./assets/user-image.png" alt="user-image" />
+            </section>
+          </li>
+        </ul>
+        <section>
+          <section id="bridge2"></section>
+          <section id="user-menu">
             <ul>
               <li class="">
                 <img
                   src="./assets/user-image.png"
                   alt="User Sandra Marx Picture"
                 />
-                <div>
+                <section>
                   Sandra Marx
                   <p>sandra@gmail.com</p>
-                </div>
+                </section>
               </li>
             </ul>
             <hr />
@@ -152,9 +185,9 @@
               </li>
             </ul>
             <p>v1.2.69 · Terms & Conditions</p>
-          </div>
-        </div>
-      </div>
+          </section>
+        </section>
+      </section>
     </nav>
   </body>
 </html>
