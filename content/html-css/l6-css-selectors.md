@@ -4,4 +4,4 @@
 https://internetingishard.netlify.app/html-and-css/css-selectors/
 https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors
 
-Quiz: https://forms.office.com/r/jcCagg0yCS
+Quiz: https://forms.office.com/r/5xxrxwBcFH

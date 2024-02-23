@@ -2,4 +2,4 @@
 
 Read this guide of React Docs: https://react.dev/learn/passing-props-to-a-component
 
-Quiz: https://forms.office.com/r/eFPeShGS70
+Quiz: https://forms.office.com/r/iGAq7ngRBX
