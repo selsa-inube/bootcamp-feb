@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LS - L11-1 Build a Table</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
   </head>
 
   <body>
@@ -22,7 +30,31 @@
         { name: "Mont Blanc", height: 4808, place: "Italy/France" },
       ];
 
-      // Your code here
+      function createTable(data) {
+        let table = document.createElement("table");
+        let row = document.createElement("tr");
+
+        Object.keys(data[0]).forEach((key) => {
+          const headerCell = document.createElement("th");
+          headerCell.textContent = key.toUpperCase();
+          row.appendChild(headerCell);
+        });
+        table.appendChild(row);
+
+        data.forEach((item) => {
+          row = document.createElement("tr");
+          Object.values(item).forEach((value) => {
+            const dataCell = document.createElement("td");
+            dataCell.textContent = value;
+            row.appendChild(dataCell);
+          });
+          table.appendChild(row);
+        });
+
+        return table;
+      }
+
+      document.getElementById("mountains").appendChild(createTable(MOUNTAINS));
     </script>
   </body>
 </html>
