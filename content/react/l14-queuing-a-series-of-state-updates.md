@@ -2,4 +2,4 @@
 
 Read this guide of React Docs: https://react.dev/learn/queueing-a-series-of-state-updates
 
-Quiz: https://forms.office.com/r/CgT664Pby5
+Quiz: https://forms.office.com/r/8MmKB3XYz4
