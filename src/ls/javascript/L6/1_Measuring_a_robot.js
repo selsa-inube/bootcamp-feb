@@ -15,7 +15,7 @@ function countSteps(state, robot, memory) {
 function compareRobots(robot1, memory1, robot2, memory2) {
   let stepsR1 = 0;
   let stepsR2 = 0;
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < 100; i++) {
     let state = VillageState.random();
     console.log("state ===>");
     console.log(state);
@@ -26,7 +26,7 @@ function compareRobots(robot1, memory1, robot2, memory2) {
   console.log("Average Robot 2 = " + (stepsR2 / 100).toFixed(2));
 }
 
-// compareRobots(routeRobot, [], goalOrientedRobot, []);
+compareRobots(routeRobot, [], goalOrientedRobot, []);
 
 module.exports = {
   compareRobots,

@@ -15,15 +15,14 @@ function myRobot({ place, parcels }, route) {
   if (route.length == 0) {
     let shortestRoute = 0;
     let shortestDistance = Infinity;
+    var routeTemp = null;
 
-    // Iteramos sobre todos los paquetes para encontrar el más cercano
     for (let parcel of parcels) {
-      let routeTemp = null;
-      console.log("------------------");
-      console.log("place = " + place);
-      console.log("parcel = " + parcel);
-      console.log("parcel.place = " + parcel.place);
-      console.log("parcel.address = " + parcel.address);
+      // console.log("------------------");
+      // console.log("place = " + place);
+      // console.log("parcel = " + parcel);
+      // console.log("parcel.place = " + parcel.place);
+      // console.log("parcel.address = " + parcel.address);
 
       if (parcel.place != place) {
         routeTemp = findRoute(roadGraph, place, parcel.place);
@@ -31,8 +30,8 @@ function myRobot({ place, parcels }, route) {
         routeTemp = findRoute(roadGraph, place, parcel.address);
       }
 
-      console.log("routeTemp = " + routeTemp);
-      console.log("routeTemp.length  = " + routeTemp.length);
+      // console.log("routeTemp = " + routeTemp);
+      // console.log("routeTemp.length  = " + routeTemp.length);
 
       // Calculamos la distancia total de esta ruta
       let totalDistance =
@@ -55,5 +54,6 @@ function myRobot({ place, parcels }, route) {
   return { direction: route[0], memory: route.slice(1) };
 }
 
+// compareRobots(goalOrientedRobot, [], myRobot, []);
 compareRobots(goalOrientedRobot, [], myRobot, []);
 //runRobotAnimation(VillageState.random(), yourRobot, memory);
