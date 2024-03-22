@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  border: 0;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
