@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LS - L12-1 Balloon</title>
+  </head>
+
+  <body>
+    <p>🎈</p>
+
+    <script>
+      let pTag = document.querySelector("p");
+      let pStyle = window.getComputedStyle(pTag).fontSize;
+      let pSize = parseFloat(pStyle);
+
+      function handler(event) {
+        if (event.key === "ArrowUp") {
+          pTag.style.fontSize = (pSize += 5) + "px";
+          if (pSize >= 40) {
+            pTag.textContent = "💥";
+            document.body.removeEventListener("keydown", handler);
+          }
+        } else if (event.key === "ArrowDown") {
+          pTag.style.fontSize = (pSize -= 5) + "px";
+        }
+      }
+
+      document.body.addEventListener("keydown", handler);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LS - L11-3 Tabs</title>
+  </head>
+
+  <body>
+    <tab-panel>
+      <div data-tabname="one">Tab one</div>
+      <div data-tabname="two">Tab two</div>
+      <div data-tabname="three">Tab three</div>
+    </tab-panel>
+
+    <script>
+      function asTabs(panel) {
+        let buttonPanel = document.createElement("div");
+        panel.parentNode.insertBefore(buttonPanel, panel);
+
+        panel.childNodes.forEach((node) => {
+          if (node.nodeType === 1) {
+            let button = document.createElement("button");
+            button.textContent = node.getAttribute("data-tabname");
+            button.addEventListener("click", () => {
+              showTab(node.getAttribute("data-tabname"));
+            });
+            buttonPanel.appendChild(button);
+          }
+        });
+
+        function showTab(tab) {
+          panel.childNodes.forEach((node) => {
+            if (node.nodeType === 1) {
+              node.style.display = "none";
+              if (node.getAttribute("data-tabname") === tab)
+                node.style.display = "block";
+            }
+          });
+
+          buttonPanel.childNodes.forEach((button) => {
+            button.style.fontWeight = "normal";
+            if (button.textContent === tab) {
+              button.style.fontWeight = "bolder";
+            }
+          });
+        }
+
+        showTab("one");
+      }
+
+      asTabs(document.querySelector("tab-panel"));
+    </script>
+  </body>
+</html>
