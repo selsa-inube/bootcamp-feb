@@ -37,6 +37,13 @@
                 node.style.display = "block";
             }
           });
+
+          buttonPanel.childNodes.forEach((button) => {
+            button.style.fontWeight = "normal";
+            if (button.textContent === tab) {
+              button.style.fontWeight = "bolder";
+            }
+          });
         }
 
         showTab("one");
