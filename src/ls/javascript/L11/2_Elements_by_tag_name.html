@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LS - L11-2 Elements by tag name</title>
+  </head>
+
+  <body>
+    <h1>Heading with a <span>span</span> element.</h1>
+    <p>A paragraph with <span>one</span>, <span>two</span> spans.</p>
+
+    <script>
+      function byTagName(node, tagName) {
+        tagName = tagName.toUpperCase();
+
+        function countTags(node, tagName) {
+          let tags = [];
+          if (node.tagName === tagName) {
+            tags.push(node);
+          }
+          for (let child of node.childNodes) {
+            if (child.nodeType === 1) {
+              tags = tags.concat(countTags(child, tagName));
+            }
+          }
+          return tags;
+        }
+
+        return countTags(node, tagName);
+      }
+
+      console.log(byTagName(document.body, "h1").length);
+      // → 1
+      console.log(byTagName(document.body, "span").length);
+      // → 3
+      let para = document.querySelector("p");
+      console.log(byTagName(para, "span").length);
+      // → 2
+    </script>
+  </body>
+</html>
