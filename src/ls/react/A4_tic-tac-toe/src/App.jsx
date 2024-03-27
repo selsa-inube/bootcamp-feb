@@ -1,6 +1,14 @@
-import { useState } from 'react';
-import {StyledSection}  from './styles';
-
+import { useState } from "react";
+import {
+  StyledSection,
+  StyledGameBoard,
+  GlobalStyle,
+  StyledSquare,
+  StyledGame,
+  StyledText,
+  StyledStatus,
+  StyledGameInfo,
+} from "./styles";
 
 function Square({ value, onSquareClick, className }) {
   return (
@@ -12,14 +20,14 @@ function Square({ value, onSquareClick, className }) {
 
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
-    if (calculateWinner(squares).winner  || squares[i]) {
+    if (calculateWinner(squares).winner || squares[i]) {
       return;
     }
     const nextSquares = squares.slice();
     if (xIsNext) {
-      nextSquares[i] = 'X';
+      nextSquares[i] = "X";
     } else {
-      nextSquares[i] = 'O';
+      nextSquares[i] = "O";
     }
     onPlay(nextSquares);
   }
@@ -27,9 +35,9 @@ function Board({ xIsNext, squares, onPlay }) {
   const { winner, winningSquares } = calculateWinner(squares);
   let status;
   if (winner) {
-    status = 'Winner: ' + winner;
+    status = "Winner: " + winner;
   } else {
-    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+    status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
   const rows = [];
@@ -39,22 +47,28 @@ function Board({ xIsNext, squares, onPlay }) {
     for (let j = 0; j < 3; j++) {
       const index = i * 3 + j;
       let className = "square";
-      if ((winningSquares.includes(index))) {className+=' winner-square'};
+      const isWinnerSquare = winningSquares.includes(index);
+      const backgroundColor = isWinnerSquare ? "#ddd" : "#fff";
+      const fontColor = isWinnerSquare ? "#f88" : "#000";
+
       squaresRow.push(
-        <Square key={index}
-                value={squares[index]}
-                className={className}
-                onSquareClick={() => handleClick(index)}
-        />
+        <StyledSquare
+          key={index}
+          value={squares[index]}
+          style={{ background: backgroundColor, color: fontColor }}
+          onClick={() => handleClick(index)}
+        >
+          {squares[index]}
+        </StyledSquare>,
       );
     }
 
-    rows.push(<div key={i} className="board-row">{squaresRow}</div>);
+    rows.push(<StyledGameBoard key={i}>{squaresRow}</StyledGameBoard>);
   }
 
   return (
-    < >
-      <div className="status">{status}</div>
+    <>
+      <StyledStatus>{status}</StyledStatus>
       {rows}
     </>
   );
@@ -80,36 +94,44 @@ export default function Game() {
     let description;
     if (move > 0) {
       if (move === currentMove) {
-          return (<li key={move}><p>You are at move # {move}</p></li>);
+        return (
+          <li key={move}>
+            <StyledText>You are at move # {move}</StyledText>
+          </li>
+        );
       } else {
-          description = 'Go to move #' + move;
+        description = "Go to move #" + move;
       }
     } else {
-      description = 'Go to game start';
+      description = "Go to game start";
     }
     return (
       <li key={move}>
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
-
   });
 
   return (
-    <StyledSection>
-    <div className="game">
-      <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-      </div>
-      <div className="game-info">
-        <ol>{moves}</ol>
-      </div>
-    </div>
-    </StyledSection>
+    <>
+      <GlobalStyle />
+      <StyledSection>
+        <StyledGame>
+          <StyledGameBoard>
+            <Board
+              xIsNext={xIsNext}
+              squares={currentSquares}
+              onPlay={handlePlay}
+            />
+          </StyledGameBoard>
+          <StyledGameInfo>
+            <ol>{moves}</ol>
+          </StyledGameInfo>
+        </StyledGame>
+      </StyledSection>
+    </>
   );
 }
-
-
 
 function calculateWinner(squares) {
   const lines = [
@@ -125,7 +147,7 @@ function calculateWinner(squares) {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-        return { winner: squares[a], winningSquares: [a, b, c] };
+      return { winner: squares[a], winningSquares: [a, b, c] };
     }
   }
   return { winner: null, winningSquares: [] };
