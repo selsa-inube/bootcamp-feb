@@ -1,4 +1,13 @@
-import { Outlet, Link, NavLink, useLoaderData, Form, redirect, useNavigation, useSubmit,} from "react-router-dom";
+import {
+  Outlet,
+  Link,
+  NavLink,
+  useLoaderData,
+  Form,
+  redirect,
+  useNavigation,
+  useSubmit,
+} from "react-router-dom";
 import { getContacts, createContact } from "../contacts";
 import { useEffect } from "react";
 
@@ -14,18 +23,15 @@ export async function loader({ request }) {
   return { contacts, q };
 }
 
-
 export default function Root() {
   const { contacts, q } = useLoaderData();
   const navigation = useNavigation();
   const submit = useSubmit();
 
   const searching =
-  navigation.location &&
-  new URLSearchParams(navigation.location.search).has(
-    "q"
-  );
-  
+    navigation.location &&
+    new URLSearchParams(navigation.location.search).has("q");
+
   useEffect(() => {
     document.getElementById("q").value = q;
   }, [q]);
@@ -50,16 +56,9 @@ export default function Root() {
                   replace: !isFirstSearch,
                 });
               }}
-              />
-            <div
-              id="search-spinner"
-              aria-hidden
-              hidden={!searching}
             />
-            <div
-              className="sr-only"
-              aria-live="polite"
-            ></div>
+            <div id="search-spinner" aria-hidden hidden={!searching} />
+            <div className="sr-only" aria-live="polite"></div>
           </Form>
           <Form method="post">
             <button type="submit">New</button>
@@ -73,23 +72,19 @@ export default function Root() {
                   <NavLink
                     to={`contacts/${contact.id}`}
                     className={({ isActive, isPending }) =>
-                      isActive
-                        ? "active"
-                        : isPending
-                        ? "pending"
-                        : ""
+                      isActive ? "active" : isPending ? "pending" : ""
                     }
                   >
-                  <Link to={`contacts/${contact.id}`}>
-                    {contact.first || contact.last ? (
-                      <>
-                        {contact.first} {contact.last}
-                      </>
-                    ) : (
-                      <i>No Name</i>
-                    )}{" "}
-                    {contact.favorite && <span>★</span>}
-                  </Link>
+                    <Link to={`contacts/${contact.id}`}>
+                      {contact.first || contact.last ? (
+                        <>
+                          {contact.first} {contact.last}
+                        </>
+                      ) : (
+                        <i>No Name</i>
+                      )}
+                      {contact.favorite && <span>★</span>}
+                    </Link>
                   </NavLink>
                 </li>
               ))}
@@ -101,10 +96,10 @@ export default function Root() {
           )}
         </nav>
       </div>
-      <div id="detail"
-          className={
-            navigation.state === "loading" ? "loading" : ""
-          }>
+      <div
+        id="detail"
+        className={navigation.state === "loading" ? "loading" : ""}
+      >
         <Outlet />
       </div>
     </>
