@@ -2,7 +2,7 @@ import { StyledSection, StyledNav } from "./styles";
 import MenuBar from "../common/menuBar";
 import { IoChevronForwardSharp } from "react-icons/io5";
 import ArticleTypeD from "../common/articleTypeD";
-import ImageArticleD from "../assets/art_type4_02.png";
+import DataArticlesD from "./data";
 
 function Footer() {
   const footerBarOtpions = [
@@ -12,6 +12,7 @@ function Footer() {
     "Asia",
     "Commodities",
   ];
+
   return (
     <StyledSection>
       <StyledNav>
@@ -26,77 +27,21 @@ function Footer() {
           </a>
         </section>
       </StyledNav>
-      <ArticleTypeD
-        imgSrc={ImageArticleD}
-        imgAlt={"graph"}
-        imgWidth={"90px"}
-        articleHeader={"Dow Jones mini"}
-        val1={"-40.00"}
-        val2={"24394.00"}
-        val3={"-0.51%"}
-        date={"7:13 A.M."}
-        boxColor={"#ff3366"}
-      />
 
-      <ArticleTypeD
-        imgSrc={ImageArticleD}
-        imgAlt={"graph"}
-        imgWidth={"90px"}
-        articleHeader={"Dow Jones mini"}
-        val1={"-40.00"}
-        val2={"24394.00"}
-        val3={"-0.51%"}
-        date={"7:13 A.M."}
-        boxColor={"#398939"}
-      />
-
-      <ArticleTypeD
-        imgSrc={ImageArticleD}
-        imgAlt={"graph"}
-        imgWidth={"90px"}
-        articleHeader={"Dow Jones mini"}
-        val1={"-40.00"}
-        val2={"24394.00"}
-        val3={"-0.51%"}
-        date={"7:13 A.M."}
-        boxColor={"#398939"}
-      />
-
-      <ArticleTypeD
-        imgSrc={ImageArticleD}
-        imgAlt={"graph"}
-        imgWidth={"90px"}
-        articleHeader={"Dow Jones mini"}
-        val1={"-40.00"}
-        val2={"24394.00"}
-        val3={"-0.51%"}
-        date={"7:13 A.M."}
-        boxColor={"#ff3366"}
-      />
-
-      <ArticleTypeD
-        imgSrc={ImageArticleD}
-        imgAlt={"graph"}
-        imgWidth={"90px"}
-        articleHeader={"Dow Jones mini"}
-        val1={"-40.00"}
-        val2={"24394.00"}
-        val3={"-0.51%"}
-        date={"7:13 A.M."}
-        boxColor={"#000"}
-      />
-
-      <ArticleTypeD
-        imgSrc={ImageArticleD}
-        imgAlt={"graph"}
-        imgWidth={"90px"}
-        articleHeader={"Dow Jones mini"}
-        val1={"-40.00"}
-        val2={"24394.00"}
-        val3={"-0.51%"}
-        date={"7:13 A.M."}
-        boxColor={"#ff3366"}
-      />
+      {DataArticlesD.map((article) => (
+        <ArticleTypeD
+          key={article.id}
+          imgSrc={article.image}
+          imgAlt={article.type}
+          imgWidth={article.width}
+          articleHeader={article.title}
+          val1={article.value1}
+          val2={article.value2}
+          val3={article.value3}
+          date={article.time}
+          boxColor={article.color}
+        />
+      ))}
     </StyledSection>
   );
 }

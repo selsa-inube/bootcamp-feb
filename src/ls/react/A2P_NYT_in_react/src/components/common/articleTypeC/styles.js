@@ -4,9 +4,9 @@ const StyledSection = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr) auto;
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 10px;
+  grid-column-gap: 5px;
   grid-row-gap: 5px;
-  margin: 25px 0;
+  margin: 20px 0;
 
   & > a:nth-child(1) {
     grid-area: 1 / 1 / 4 / 3;
@@ -20,7 +20,7 @@ const StyledSection = styled.section`
     align-items: center;
   }
 
-  & > section {
+  & > a:nth-child(3) {
     grid-area: 1 / 3 / 6 / 4;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@ const StyledSection = styled.section`
   & h2 {
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.3;
     letter-spacing: 0;
     font-weight: bold;
     padding: 3px 0 0 0;
@@ -37,11 +37,11 @@ const StyledSection = styled.section`
 
   & p {
     font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 600;
-    color: #606060;
+    color: #999;
   }
 `;
 

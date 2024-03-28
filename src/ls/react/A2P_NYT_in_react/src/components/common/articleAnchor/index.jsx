@@ -1,11 +1,7 @@
-import { StyledAnchor } from "./styles";
+import { StyledLink } from "./styles";
 
 function ArticleAnchor({ anchorText = "Continue Reading", href = "#" }) {
-  return (
-    <StyledAnchor>
-      <a href={href}>{anchorText}</a>
-    </StyledAnchor>
-  );
+  return <StyledLink href={href}>{anchorText}</StyledLink>;
 }
 
 export default ArticleAnchor;

@@ -14,7 +14,6 @@ function ArticleTypeD({
   boxColor = "green",
 }) {
   return (
-    // <StyledSection>
     <StyledSection style={{ backgroundColor: boxColor }}>
       <a href="#">
         <h2>{articleHeader}</h2>

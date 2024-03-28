@@ -4,7 +4,7 @@ const StyledHeader = styled.header`
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 2fr;
+  grid-template-rows: auto auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   justify-content: space-between;
@@ -40,11 +40,12 @@ const StyledSectionLeft = styled.section`
 
 const StyledSectionRight = styled.section`
   justify-self: end;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
   & a {
     color: #000;
     padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   & a:last-of-type {
     color: #000;
@@ -68,13 +69,14 @@ const StyledNav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid #eee;
 
   & section:last-child {
-    margin: 0px;
     padding: 20px;
     background: #000;
 
     & a {
+      font-family: Arial, Helvetica, sans-serif;
       color: #fff;
       text-align: center;
     }

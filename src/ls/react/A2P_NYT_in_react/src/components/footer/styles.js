@@ -7,8 +7,8 @@ const StyledSection = styled.section`
   grid-template-rows: auto auto;
   grid-column-gap: 20px;
   grid-row-gap: 0px;
-  border-top: 1px solid silver;
-  padding-bottom: 30px;
+  border-top: 1px solid #eee;
+  padding-bottom: 10px;
 `;
 
 const StyledNav = styled.nav`
@@ -24,11 +24,12 @@ const StyledNav = styled.nav`
     padding: 20px;
 
     & a {
+      font-family: Arial, Helvetica, sans-serif;
       text-align: center;
       color: #606060;
       white-space: nowrap;
       font-weight: 600;
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0;
     }
     & a:hover {

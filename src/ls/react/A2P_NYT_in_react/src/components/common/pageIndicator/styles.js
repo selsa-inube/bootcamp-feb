@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledAnchor = styled.section`
+const StyledSection = styled.section`
   padding: 10px 0;
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@ const StyledAnchor = styled.section`
     text-decoration: none;
     padding: 20px 10px 0 0;
     font-size: 6px;
-    color: #888;
+    color: #bbb;
   }
 
   & a:hover {
@@ -23,4 +23,4 @@ const StyledAnchor = styled.section`
   }
 `;
 
-export { StyledAnchor };
+export { StyledSection };

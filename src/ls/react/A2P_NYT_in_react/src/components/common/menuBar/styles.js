@@ -9,6 +9,7 @@ const StyledSection = styled.section`
 `;
 
 const StyledUl = styled.ul`
+  width: ${(props) => props.$width || "auto"};
   list-style: none;
   display: flex;
   flex-direction: row;

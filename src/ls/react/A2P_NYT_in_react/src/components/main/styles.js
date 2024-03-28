@@ -10,7 +10,7 @@ const StyledMain = styled.section`
 
   &section:nth-child(2),
   &section:nth-child(3) {
-    border-right: 1px solid #e8e8e8;
+    border-right: 1px solid #eee;
     padding: 0 50px 0 0;
   }
 `;

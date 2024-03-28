@@ -7,7 +7,7 @@ function ArticleTypeB({ catTitle, catDate, articleHeader, anchorText }) {
     <StyledSection>
       <CategoryButton category={catTitle} date={catDate} />
       <a href="#">
-        <h1>{articleHeader} </h1>
+        <h2>{articleHeader} </h2>
       </a>
       <ArticleAnchor text={anchorText} />
     </StyledSection>

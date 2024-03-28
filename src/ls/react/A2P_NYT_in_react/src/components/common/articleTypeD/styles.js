@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledSection = styled.section`
+  font-family: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -19,7 +20,7 @@ const StyledSection = styled.section`
     align-items: center;
   }
 
-  & > section {
+  & > a:nth-child(2) {
     grid-area: 2 / 2 / 4 / 3;
     display: flex;
     align-items: center;

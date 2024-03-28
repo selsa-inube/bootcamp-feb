@@ -10,9 +10,9 @@ const StyledBarHeader = styled.section`
   padding: 0 20px 5px 0;
 
   & h2 {
+    font-family: Georgia, Times, "Times New Roman", serif;
     margin: 0;
-    font-family: Times, "Times New Roman", Times, serif;
-    font-size: 28px;
+    font-size: 24px;
     letter-spacing: 0;
     white-space: nowrap;
   }

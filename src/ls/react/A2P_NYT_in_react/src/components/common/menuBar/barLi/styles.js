@@ -4,8 +4,9 @@ const StyledLi = styled.li`
   margin: 20px;
 
   & a {
+    font-family: Arial, Helvetica, sans-serif;
     color: #333;
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
     &:hover {
       color: #555;
